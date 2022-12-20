@@ -37,7 +37,7 @@ public class RegisterForm extends javax.swing.JFrame {
 
         jTextRef.setEditable(false);
         jTextRef.setColumns(20);
-        jTextRef.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextRef.setFont(new java.awt.Font("Dialog", 0, 18));
         jTextRef.setLineWrap(true);
         jTextRef.setRows(5);
         jTextRef.setText("password2022");
@@ -47,7 +47,7 @@ public class RegisterForm extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextRef);
 
         jTextAct.setColumns(20);
-        jTextAct.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextAct.setFont(new java.awt.Font("Dialog", 0, 18));
         jTextAct.setLineWrap(true);
         jTextAct.setRows(5);
         jTextAct.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -114,20 +114,20 @@ public class RegisterForm extends javax.swing.JFrame {
 
     EventCollector collector = new EventCollector();
 
-    private void jTextActKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextActKeyPressed
+    private void jTextActKeyPressed(java.awt.event.KeyEvent evt) {
         collector.press(evt, false);
     }
 
-    private void jTextActKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextActKeyReleased
+    private void jTextActKeyReleased(java.awt.event.KeyEvent evt) {
         collector.release(evt, false);
     }
 
-    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {
         jTextAct.setText("");
         collector = new EventCollector();
     }
 
-    private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextActionPerformed
+    private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {
         if (jTextRef.getText().equals(jTextAct.getText())) {
             FeatureModel model = FeatureExtractor.extractFeatures(collector);
             FileIO.saveModel(model);
